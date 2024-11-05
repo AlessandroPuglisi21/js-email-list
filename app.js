@@ -3,7 +3,7 @@ let randomMail = [];
 const emailList = document.getElementById('emailList')
 
 function generateRandomEmails(){
-
+    emailList.innerHTML = '' //per questo ho chiesto aiuto a ChatGpt, //! SERVE PER RIMUOVERE GLI ELEMENTI GENERATI IN PRECEDENZA
     let randomMail = [];
 
 for(let i = 0; i < numberOfMail; i++){
@@ -24,3 +24,6 @@ for(let i = 0; i < numberOfMail; i++){
 }
 
 generateRandomEmails();
+
+const button = document.getElementById('newMail')
+button.addEventListener('click', generateRandomEmails)
